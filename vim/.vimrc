@@ -69,7 +69,10 @@ set hlsearch
 " Set the commands to save in history default number is 20.
 set history=1000
 
-" set TMUX window name to name of file
+" Set TMUX window name to name of file
 if exists('$TMUX')
     autocmd BufEnter * call system('tmux rename-window ' . expand('%:p:h:t') . '/' . expand('%:t'))
 endif
+
+" Clear search highlighting by pressing backslash twice
+nnoremap \\ :noh<return>
