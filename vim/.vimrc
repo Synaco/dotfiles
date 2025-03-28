@@ -76,3 +76,6 @@ endif
 
 " Clear search highlighting by pressing backslash twice
 nnoremap \\ :noh<return>
+
+" Auto Wrap Column Width at 72 character length
+set textwidth=72
